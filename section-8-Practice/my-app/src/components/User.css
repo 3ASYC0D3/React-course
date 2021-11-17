@@ -1,6 +1,13 @@
-body {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.userForm input {
+display: block;
+width: 100%;
+margin-bottom: 5px;
+border: 1px solid rgb(153, 153, 153);
 }
+
+.userForm label {
+font-weight: bold;
+display: block;
+margin-bottom: 8px;
+}
+  
