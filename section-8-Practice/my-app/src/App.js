@@ -1,5 +1,6 @@
 import './App.css';
 import User from './components/User';
+import UsersList from './components/UsersList';
 
 const App = () => {
 
@@ -9,30 +10,14 @@ const App = () => {
       age: 25
     },
     {
-      username: 'Darek',
-      age: 25
+      username: 'Marek',
+      age: 29
     }
   ]
 
   return <div>
-    <div className='user'>
-      <form className='userForm'>
-        <label>Username</label>
-        <input type="text"/>
-        <label>Age (Years)</label>
-        <input type="number" min="0" max="150"/>
-        <button>Add User</button>
-      </form>
-    </div>
-    <div className='usersList'>
-      <ul className='users-list'>
-              {Users.map((user) => (
-                  <li>
-                  <p>{`${user.username} (${user.age} years old)`}</p>
-                  </li>
-              ))}
-          </ul>
-    </div>
+    <User/>
+    <UsersList users={Users}/>
   </div>
 }
 
