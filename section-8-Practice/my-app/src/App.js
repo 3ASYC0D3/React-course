@@ -1,23 +1,22 @@
+import React, { useState } from 'react';
 import './App.css';
 import User from './components/User';
 import UsersList from './components/UsersList';
 
 const App = () => {
 
-  const Users = [
-    {
-      username: 'Darek',
-      age: 25
-    },
-    {
-      username: 'Marek',
-      age: 29
-    }
-  ]
+  const [users, setUsers] = useState([]);
+  
+  const addUserHandler = (userData) => {
+    setUsers((prevState) => {
+      return [userData, ...prevState]
+    });
+    console.log(users);
+  }
 
   return <div>
-    <User/>
-    <UsersList users={Users}/>
+    <User onAddUser={addUserHandler}/>
+    { users.length !== 0 && <UsersList users={users}/> }
   </div>
 }
 
