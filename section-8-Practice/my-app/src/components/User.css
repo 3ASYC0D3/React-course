@@ -1,13 +1,34 @@
+.card-input {
+margin: 2rem auto;
+margin-top: 2.5rem;
+padding: 1rem;
+width: 90vw;
+box-sizing: border-box;
+}
+
 .userForm input {
-display: block;
-width: 100%;
-margin-bottom: 5px;
-border: 1px solid rgb(153, 153, 153);
+font: inherit;
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 0.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.userForm input:focus {
+  outline: none;
+  border: 1px solid rgb(98, 7, 98);
 }
 
 .userForm label {
-font-weight: bold;
-display: block;
-margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
   
+@media (min-width: 768px) {
+  .card-input {
+    left: calc(50% - 20rem);
+    width: 45rem;
+  }
+}

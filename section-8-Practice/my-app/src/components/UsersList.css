@@ -1,6 +1,6 @@
 .users-list {
     list-style: none;
-    padding: 0;
+    padding: 1rem;
   }
   
   .users-list li p {
@@ -8,4 +8,8 @@
     padding: 0;
     margin-top: 0;
     margin-bottom: 5px;
+  }
+
+  .users-list li:last-child p {
+    margin-bottom: 0;
   }
